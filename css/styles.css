@@ -5,33 +5,36 @@ body{
 	padding: 0px;
 	font-family: courier;
 }
+
 h1{
 	text-align: center;
 	font-size: 1.75em;
 }
 
+/*** default width is for desktop ***/
+div{
+	box-sizing: border-box;
+	float: left;
+	padding: 5px;
+	width: 33.33%;
+}
+
 p{
 	background-color: #ccc;
-		height: 200px;
-		vertical-align: top;
-		border: solid 1px black;
-		padding: 5px;
-		margin: 5px;
-		padding-top: 0px;
-		overflow: hidden;
-		text-overflow: ellipsis;
+	height: 200px;
+	vertical-align: top;
+	border: solid 1px black;
+	padding: 5px;
+	margin: 5px;
+	padding-top: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 p:hover{
 	cursor: n-resize;
 	overflow-y: scroll;
 }
-
-div{
-		box-sizing: border-box;
-		float: left;
-		padding: 5px;
-	}
 
 p > span{
 	text-align: center;
@@ -44,6 +47,8 @@ p > span{
 	border: solid 1px black;
 	font-size: 1.25em;
 }
+
+/*** hide the mobile only elements ***/
 #header_mobile, comment{
 		display: none;
 		}
@@ -54,6 +59,7 @@ p > span{
 
 .menuItem:nth-of-type(1) span {
 	background-color: brown;
+	color: white;
 }
 
 /*** for mobile sites ***/
@@ -85,7 +91,7 @@ p > span{
 	}
 }
 
-/*** for tables sites ***/
+/*** for tablet sites ***/
 @media (min-width: 768px) and (max-width: 991px){
 	div{
 		width: 50%;
@@ -95,10 +101,4 @@ p > span{
 		width: 100%
 	}
 }
-
-/*** for desktop sites ***/
-@media (min-width: 992px){
-	div{
-		width: 33.33%;
-	}
 }
