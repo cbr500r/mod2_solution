@@ -1,0 +1,104 @@
+
+/*** base styles ***/
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: courier;
+}
+h1{
+	text-align: center;
+	font-size: 1.75em;
+}
+
+p{
+	background-color: #ccc;
+		height: 200px;
+		vertical-align: top;
+		border: solid 1px black;
+		padding: 5px;
+		margin: 5px;
+		padding-top: 0px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+}
+
+p:hover{
+	cursor: n-resize;
+	overflow-y: scroll;
+}
+
+div{
+		box-sizing: border-box;
+		float: left;
+		padding: 5px;
+	}
+
+p > span{
+	text-align: center;
+	font-weight: bolder;
+	background-color: yellow;
+	width: 25%;/**/
+	margin: -1px -6px 0px -12px;
+	float: right;
+	clear: right;
+	border: solid 1px black;
+	font-size: 1.25em;
+}
+#header_mobile, comment{
+		display: none;
+		}
+
+.menuItem:nth-of-type(2) span {
+	background-color: green;
+}
+
+.menuItem:nth-of-type(1) span {
+	background-color: brown;
+}
+
+/*** for mobile sites ***/
+@media (max-width: 767px){
+	div{
+		width: 100%;
+	}
+	#header_main {
+		display: none;
+	}
+	#header_mobile{
+		display: block;
+		text-align: left;
+		padding-left: 10px;
+		font-family: cursive;
+		font-size: 1.25em;
+	}
+
+	p > span {
+		float: none;
+		text-align: center;
+		display: inline-block;
+		width: 102%;
+		margin: -1px 0px 0px -6px;
+	}
+
+	comment{
+		display: inline;
+	}
+}
+
+/*** for tables sites ***/
+@media (min-width: 768px) and (max-width: 991px){
+	div{
+		width: 50%;
+	}
+	.menuItem:nth-of-type(3){
+		clear: left;
+		width: 100%
+	}
+}
+
+/*** for desktop sites ***/
+@media (min-width: 992px){
+	div{
+		width: 33.33%;
+	}
+}
